@@ -1,0 +1,27 @@
+:root {
+	--shadow-003: rgba(0, 0, 0, 0.3);
+	--button-color: #e67e22;
+	--button-text-or-fon-color: #ffffff;
+	--black-h: #333333;
+	--gray-info: #555555;
+	--sec1-fon: #fdf2e9;
+	--border-color: #fdf2e9;
+	--text-color-orange: #cf711f;
+	--gray-color-about: #888888;
+	--case-h-color-gray: #dddddd;
+	--front-circle: #fdf2e9;
+	--back-circle: #fae5d3;
+	--green-color-card-mark: #51cf66;
+	--lightgreen-color-card-mark: #94d82d;
+	--yellow-color-card-mark: #ffd43b;
+	--red-color-card-mark: rgb(245, 98, 98);
+	--card-shadow: rgba(0, 0, 0, 0.075);
+	--section-five-color: #fdf2e9;
+	--user-name-color: #6f6f6f;
+	--lightorange-color: #eb984e;
+	--form-text-color: #45260a;
+	--light-orange-gradient-opacity: rgba(235, 151, 78, 0.35);
+	--dark-orange-gradient-opacity: rgba(230, 125, 34, 0.35);
+	--footer-border: #eeeeee;
+	--footer-under-logo: #767676;
+}
