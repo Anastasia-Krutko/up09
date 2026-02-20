@@ -1,0 +1,2138 @@
+/*Под разрешение 1400px*/
+@media (max-width: 1400px) {
+	header,
+	main,
+	footer {
+		max-width: 140rem;
+	}
+	.img_deliv_grid {
+		width: 50rem;
+		height: 50rem;
+	}
+	.presents_company {
+		align-items: center;
+		gap: 16rem;
+		height: 130rem;
+	}
+	button {
+		transition: 0.01s ease-out;
+	}
+	button:active {
+		transition: 0.01s ease-in;
+	}
+	.left_presents {
+		width: 70rem;
+		margin-top: 0;
+	}
+	.presents_reviews_conteiner {
+		width: 50rem;
+	}
+	.presents_zag {
+		width: 58rem;
+	}
+	.reviews_grid_2row_2col {
+		margin-top: 4rem;
+		gap: 4rem;
+	}
+	.reviews_block {
+		width: 23rem;
+	}
+
+	.img_gallery {
+		width: 50rem;
+		height: 67rem;
+		grid-template-columns: repeat(3, 15rem);
+		grid-template-rows: repeat(4, 15rem);
+	}
+	.gallery_pice {
+		width: 15rem;
+		height: 15rem;
+	}
+	.mark_cost_zag {
+		height: max-content;
+	}
+	.footer_text_16px {
+		text-wrap: wrap;
+		width: 15.3rem;
+		height: max-content;
+	}
+}
+
+/*Под разрешение 1024px*/
+
+@media (max-width: 1024px) {
+	header,
+	main,
+	footer {
+		max-width: 102.4rem;
+	}
+	header {
+		padding: 0 3rem;
+	}
+	.container {
+		max-width: 100rem;
+		gap: 5.3rem;
+	}
+	.headname {
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+	}
+	header .orange_but {
+		width: 14.92rem;
+		height: 3.78rem;
+		padding: 1rem 2.16rem;
+	}
+	button {
+		transition: 0.01s ease-out;
+	}
+	button:active {
+		transition: 0.01s ease-in;
+	}
+	.sec1_but {
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+		padding: 1.44rem 2.88rem;
+	}
+	.orange_but.sec1_but {
+		width: 31.16rem;
+		height: 4.68rem;
+	}
+	.white_but.sec1_but {
+		width: 17.16rem;
+		height: 4.68rem;
+	}
+	.header_right,
+	aside {
+		gap: 2rem;
+		width: max-content;
+	}
+	.healthy_food_dilevery {
+		height: 75rem;
+	}
+	.left_sec1 {
+		width: 46rem;
+		height: 70rem;
+	}
+	.deliver {
+		font-size: 3.9rem;
+		width: inherit;
+	}
+	.healthy_food_dilevery picture {
+		margin-top: 10rem;
+	}
+	.img_deliv_grid {
+		width: 40rem;
+		height: 40rem;
+	}
+	.container {
+		max-width: 100rem;
+		height: max-content;
+	}
+	.grid_sec1 {
+		grid-template-columns: 48% 52%;
+	}
+	.sec1_but_cont {
+		flex-direction: column;
+		gap: 1rem;
+	}
+	.avatar {
+		width: 4.3rem;
+		height: 4.3rem;
+	}
+	.sec1_p {
+		text-wrap: wrap;
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+	}
+	.img_av {
+		text-wrap: nowrap;
+	}
+	.avatar_and_text {
+		margin-top: 7rem;
+		width: 46rem;
+	}
+	.about,
+	.company_container {
+		width: 95rem;
+	}
+	.company_container {
+		gap: 3rem;
+		padding: 0;
+	}
+	.logos_company {
+		height: 3rem;
+	}
+	.flex_col_sec2 {
+		height: 8rem;
+		margin-left: 2rem;
+	}
+	.healthy_doz_block1 {
+		width: 95rem;
+	}
+	.text_healthy_doz_block1 {
+		width: inherit;
+		font-size: 1.4rem;
+	}
+	.healthy_doz_zag {
+		width: inherit;
+		font-size: 3.2rem;
+	}
+	.case_info {
+		width: 40rem;
+	}
+	.one_case {
+		margin-bottom: 0;
+	}
+	.number {
+		font-size: 7.7rem;
+		line-height: 7.7rem;
+	}
+	.case_text {
+		font-size: 1.6rem;
+		line-height: 3rem;
+	}
+	.case_zag {
+		font-size: 2.1rem;
+		line-height: 2.5rem;
+	}
+	.smartphone {
+		width: 16rem;
+		height: 34rem;
+	}
+	.smartphone_container {
+		width: 45rem;
+	}
+	.smartphone_container:nth-child(2):before {
+		content: '';
+		width: 23rem;
+		height: 23rem;
+		border-radius: 50%;
+		background-color: var(--back-circle);
+		top: 125.3rem;
+		z-index: -1;
+	}
+	.smartphone_container:nth-child(3):before {
+		content: '';
+		width: 23rem;
+		height: 23rem;
+		border-radius: 50%;
+		background-color: var(--back-circle);
+		top: 170.3rem;
+		z-index: -1;
+	}
+	.smartphone_container:nth-child(6):before {
+		content: '';
+		width: 23rem;
+		height: 23rem;
+		border-radius: 50%;
+		background-color: var(--back-circle);
+		top: 210.3rem;
+		z-index: -1;
+	}
+	.smartphone_container:nth-child(2)::after {
+		content: '';
+		width: 29rem;
+		height: 29rem;
+		border-radius: 50%;
+		background-color: var(--front-circle);
+		top: 122.2rem;
+		z-index: -2;
+	}
+	.smartphone_container:nth-child(3)::after {
+		content: '';
+		width: 29rem;
+		height: 29rem;
+		border-radius: 50%;
+		background-color: var(--front-circle);
+		top: 167.2rem;
+		z-index: -2;
+	}
+	.smartphone_container:nth-child(6)::after {
+		content: '';
+		width: 29rem;
+		height: 29rem;
+		border-radius: 50%;
+		background-color: var(--front-circle);
+		top: 207.2rem;
+		z-index: -2;
+	}
+	.system_text_container {
+		width: 100rem;
+		height: 10rem;
+	}
+	.system_text_zag {
+		font-size: 1.4rem;
+		line-height: 1.4rem;
+	}
+	.system_zag {
+		font-size: 3.2rem;
+		line-height: 3.8rem;
+		width: 80rem;
+		height: min-content;
+		text-wrap: wrap;
+	}
+	.card_container_flex {
+		width: 100rem;
+		gap: 3.3rem;
+	}
+	.card {
+		width: 29rem;
+		height: 45rem;
+		gap: 0.1rem;
+	}
+	.food_card {
+		width: 29rem;
+		height: 20rem;
+	}
+	.cadr_full_info_conteiner {
+		width: 30rem;
+		gap: 0.7rem;
+	}
+	.card_mark {
+		font-size: 1rem;
+		line-height: 1rem;
+		height: min-content;
+	}
+	.card_zag {
+		font-size: 2.1rem;
+		line-height: 2.1rem;
+		width: 20rem;
+	}
+	.info_container {
+		width: 20rem;
+	}
+	.img_card_icon {
+		width: 2.1rem;
+		height: 2.1rem;
+	}
+	.info_card_string {
+		gap: 1rem;
+	}
+	.card_string_text {
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+	}
+	.card_list {
+		width: 29rem;
+		height: 45rem;
+		gap: 2rem;
+	}
+	.list_zag {
+		width: 26rem;
+		font-size: 2.1rem;
+		line-height: 2.5rem;
+		text-wrap: wrap;
+	}
+	.list_style {
+		width: 2.7rem;
+		height: 2.7rem;
+	}
+	.card_ul {
+		gap: 1.6rem;
+	}
+	.card_ul li {
+		font-size: 1.6rem;
+		line-height: 1.9rem;
+	}
+	.system_ai {
+		height: 130rem;
+	}
+	.a_conteiner {
+		width: 100rem;
+	}
+	.text_under_case_block {
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+	}
+
+	/*Галлерея*/
+
+	.presents_text_zag {
+		font-size: 1.4rem;
+		line-height: 1.4rem;
+	}
+	.presents_zag {
+		font-size: 3.2rem;
+		line-height: 3.8rem;
+		height: max-content;
+		width: 50rem;
+	}
+	.reviews_grid_2row_2col {
+		width: 50rem;
+		gap: 1.5rem;
+		height: max-content;
+	}
+	.reviews_block {
+		width: 21.6rem;
+		height: max-content;
+	}
+	.reviews_user {
+		font-size: 1.6rem;
+		line-height: 2.9rem;
+	}
+	.user_name {
+		font-size: 1.4rem;
+		line-height: 1.4rem;
+	}
+	.left_presents {
+		width: 62rem;
+		padding: 4rem;
+	}
+	.img_gallery {
+		width: 38rem;
+		height: max-content;
+		grid-template-columns: repeat(2, 18rem);
+		grid-template-rows: repeat(6, 18rem);
+		gap: 1.3rem;
+	}
+	.gallery_pice {
+		width: 18rem;
+		height: 18rem;
+		gap: 1rem;
+		&:hover {
+			transform: scale(125%);
+		}
+	}
+	.presents_company {
+		display: flex;
+		flex-direction: row;
+		gap: 0;
+		height: max-content;
+		padding: 2rem 0;
+	}
+	.cost_zag_container {
+		width: 100rem;
+	}
+	.cost_text_zag {
+		font-size: 1.4rem;
+		line-height: 1.4rem;
+	}
+	.cost_zag {
+		font-size: 3.2rem;
+		line-height: 3.8rem;
+	}
+	.cost_card_container {
+		width: inherit;
+		padding: 0 14rem;
+		gap: 2rem;
+	}
+	.cost_card {
+		width: 34.6rem;
+		height: 56.4rem;
+		gap: 3rem;
+		&:hover {
+			transform: scale(105%);
+		}
+	}
+	.cost_card_pice_one {
+		width: 25.9rem;
+		height: 16.3rem;
+	}
+	.text_zag_card {
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+	}
+	.symphol {
+		font-size: 2.7rem;
+		line-height: 2.7rem;
+		padding: 0.25rem 0;
+	}
+	.cost_zag_card {
+		font-size: 5.5rem;
+		line-height: 5.5rem;
+	}
+	.reviews_cost {
+		width: 25.9rem;
+		font-size: 1.4rem;
+		line-height: 2.3rem;
+	}
+	.cost_info_list {
+		width: 25.9rem;
+	}
+	.cost_info_list ul {
+		gap: 1.8rem;
+	}
+	.cost_info_list li {
+		font-size: 1.6rem;
+		line-height: 1.9rem;
+		align-items: center;
+	}
+	.cost_info_list picture {
+		display: flex;
+		align-items: center;
+	}
+	.cost_card_button {
+		width: 25.9rem;
+		height: 6.4rem;
+		padding: 1.4rem 0.4rem;
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+	}
+	.two_card::after {
+		content: 'Best value';
+		position: relative;
+		top: -49.4rem;
+		right: -11.4rem;
+		font-weight: 700;
+		font-size: 1.26rem;
+		line-height: 1.26rem;
+		letter-spacing: 0%;
+		vertical-align: middle;
+		text-transform: uppercase;
+		color: var(--black-h);
+		width: 22rem;
+		height: 2.6rem;
+		padding: 0.619rem 7.2rem;
+		background-color: var(--yellow-color-card-mark);
+		text-align: center;
+		rotate: 45deg;
+	}
+	.cost_info_under_card {
+		width: 100rem;
+	}
+	.cost_text_info {
+		width: 90rem;
+		height: 2.3rem;
+		font-size: 1.4rem;
+		line-height: 2.3rem;
+	}
+	.mark_block_cost_container {
+		width: inherit;
+		height: 31.3rem;
+		padding: 0 2.8rem;
+		gap: 4.3rem;
+	}
+	.mark_cost {
+		width: 20.9rem;
+		height: 31.3rem;
+		gap: 1.4rem;
+	}
+	.mark_cost_img {
+		width: 5.7rem;
+		height: 5.7rem;
+	}
+	.mark_cost_zag {
+		height: max-content;
+		font-size: 2.1rem;
+		line-height: 2.1rem;
+	}
+	.mark_cost_info {
+		height: max-content;
+		font-size: 1.6rem;
+		line-height: 2.9rem;
+	}
+	.for_registr_form {
+		height: 80rem;
+	}
+	.registr_form_block {
+		width: 96.6rem;
+		height: 53.6rem;
+	}
+	.registr_left_text_block {
+		width: 64.4rem;
+		height: 53.6rem;
+		padding: 4.2rem 5.7rem 5.7rem 5.7rem;
+		gap: 2.8rem;
+	}
+	.registr_zag {
+		width: 52.9rem;
+		height: 7.8rem;
+		font-size: 3.2rem;
+		line-height: 3.8rem;
+	}
+	.registr_text {
+		width: 52.9rem;
+		height: 11.7rem;
+		font-size: 1.62rem;
+		line-height: 2.9rem;
+	}
+	.input_form_grid {
+		width: 52.9rem;
+		height: 18.3rem;
+		gap: 2rem;
+	}
+	.form_grid_pice {
+		width: 25rem;
+		height: 8.5rem;
+		gap: 1rem;
+	}
+	.form_grid_zag {
+		height: min-content;
+		font-size: 1.4rem;
+		line-height: 1.4rem;
+	}
+	.registr_form_input {
+		width: 25rem;
+		height: 4rem;
+	}
+	.registr_form_button {
+		width: 25rem;
+		height: 4rem;
+		padding: 0rem 7.67rem;
+		font-size: 1.8rem;
+		line-height: 100%;
+	}
+	.form_img,
+	.form_right_block {
+		width: 32.2rem;
+		height: 54.6rem;
+	}
+	.footer_conteiner {
+		width: inherit;
+		height: 18.9rem;
+		gap: 4.3rem;
+		padding: 0 2.8rem;
+	}
+	.footer_column {
+		width: 19.2rem;
+
+		gap: 2rem;
+	}
+	.footer_small_column {
+		width: 12.848rem;
+	}
+	.footer_medium_column {
+		width: 15.128rem;
+	}
+	.footer_medium_column,
+	.footer_small_column {
+		gap: 2.7rem;
+	}
+	.footer_icons_img {
+		width: 2.2rem;
+		height: 2.2rem;
+	}
+	.footer_icons {
+		height: 2.5rem;
+		gap: 2.1rem;
+	}
+	.footer_text {
+		height: 6.1rem;
+		font-size: 1.26rem;
+		line-height: 2.016rem;
+	}
+	.footer_column_zag {
+		height: 1.7rem;
+		font-size: 1.62rem;
+		line-height: 1.62rem;
+	}
+	.footer_adres {
+		height: 4.6rem;
+		font-size: 1.44rem;
+		line-height: 2.3rem;
+	}
+	.footer_contacts {
+		height: 4.5rem;
+		font-size: 1.44rem;
+		line-height: 2.3rem;
+	}
+	.footer_text_16px {
+		font-size: 1.44rem;
+		line-height: 1.44rem;
+	}
+}
+
+/*Под разрешение 768px*/
+
+@media (max-width: 768px) {
+	header,
+	main,
+	footer {
+		max-width: 76.8rem;
+	}
+
+	header {
+		height: 6.4rem;
+		position: sticky;
+		top: 0;
+	}
+	footer {
+		padding: 10rem 19rem;
+	}
+	.logo {
+		width: 13rem;
+		height: 1.8rem;
+	}
+	aside {
+		display: none;
+	}
+	button {
+		transition: 0.01s ease-out;
+	}
+	button:active {
+		transition: 0.01s ease-in;
+	}
+	.header_right {
+		width: 4rem;
+		height: 4rem;
+		position: relative;
+		&::after {
+			content: url(../img/icons/burger.svg);
+			width: 4rem;
+			height: 4rem;
+			position: relative;
+			z-index: 202;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	.header_right:hover aside {
+		display: flex;
+		flex-direction: column;
+		background-color: var(--button-text-or-fon-color);
+		gap: 3rem;
+		width: 20rem;
+		height: 27rem;
+		z-index: 300;
+		position: absolute;
+		z-index: 190;
+		padding: 2rem;
+		padding-top: 5rem;
+		border: none;
+		border-radius: 0rem 0rem 1rem 1rem;
+		top: 1rem;
+		right: -3rem;
+	}
+	.headname {
+		font-size: 1.4rem;
+		line-height: 1.4rem;
+	}
+	.healthy_doz_info {
+		padding: 6.299rem 0 3.84rem 0;
+		gap: 7.68rem;
+	}
+	.healthy_food_dilevery {
+		width: 76.8rem;
+		height: 84.1rem;
+		padding: 2.8rem 5rem 7.6rem 5rem;
+	}
+	.grid_sec1 {
+		display: flex;
+		flex-direction: column;
+		gap: 6rem;
+	}
+	.container {
+		width: 100rem;
+	}
+	.left_sec1 {
+		width: 64rem;
+		height: 29.466rem;
+	}
+	.deliver {
+		font-size: 3.52rem;
+		line-height: 3.696rem;
+		text-align: center;
+	}
+	.info_delivery {
+		font-size: 1.6rem;
+		line-height: 2.56rem;
+		text-align: center;
+		margin-top: 3rem;
+	}
+	.sec1_but_cont {
+		width: inherit;
+		height: min-content;
+		flex-direction: row;
+		justify-content: center;
+		gap: 2rem;
+	}
+	.sec1_but {
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+		padding: 1.28rem 2.56rem;
+	}
+	.orange_but.sec1_but {
+		width: 27.7rem;
+		height: 4.16rem;
+	}
+	.white_but.sec1_but {
+		width: 15.3rem;
+		height: 4.16rem;
+	}
+	.avatar_and_text {
+		width: inherit;
+		height: 3.839rem;
+		justify-content: center;
+		gap: 1.279rem;
+		margin-top: 2rem;
+	}
+	.avatar {
+		width: 3.8rem;
+		height: 3.8rem;
+	}
+	.sec1_p {
+		font-size: 1.44rem;
+		line-height: 1.44rem;
+	}
+	.healthy_food_dilevery picture {
+		margin-top: 0;
+		margin: auto;
+	}
+	.img_deliv_grid {
+		width: 38.4rem;
+		height: 37.888rem;
+	}
+	.flex_col_sec2 {
+		width: inherit;
+		height: 5.038rem;
+		margin-left: 0;
+		gap: 1.919rem;
+		padding: 0 2.56rem;
+	}
+	.about {
+		width: 71.6rem;
+		height: 1.2rem;
+		font-size: 1.12rem;
+		line-height: 1.12rem;
+	}
+	.company_container {
+		width: 71.6rem;
+		height: 1.919rem;
+		gap: 3.99rem;
+		padding: 0 1.96em;
+	}
+	.logos_company {
+		height: 1.919rem;
+	}
+	.healthy_doz_block1 {
+		width: 76.8rem;
+		height: 9.587rem;
+		padding: 0 2.56rem;
+		gap: 1.207rem;
+	}
+	.text_healthy_doz_block1 {
+		width: 71.68rem;
+		height: 1.38rem;
+		font-size: 1.28rem;
+		line-height: 1.28rem;
+	}
+	.healthy_doz_zag {
+		width: 71.68rem;
+		height: 7rem;
+		font-size: 2.88rem;
+		line-height: 3.456rem;
+	}
+	.case_info {
+		width: 33.92rem;
+		gap: 0.5rem;
+	}
+	.number {
+		font-size: 5.92rem;
+		line-height: 5.92rem;
+		height: min-content;
+	}
+	.case_zag {
+		font-size: 1.92rem;
+		line-height: 2.3rem;
+		height: min-content;
+	}
+	.case_text {
+		font-size: 1.44rem;
+		line-height: 2.592rem;
+		height: min-content;
+	}
+	.healthy_doz_block2_grid_row3_col2 {
+		gap: 1.2rem;
+		grid-template-rows: repeat(3, 33.2rem);
+		align-items: center;
+		justify-content: center;
+	}
+	.one_case {
+		margin-bottom: -2rem;
+	}
+	.smartphone_container {
+		width: 33.922rem;
+		height: 24.009rem;
+	}
+	.smartphone {
+		width: 11.972rem;
+		height: 24.009rem;
+	}
+	.smartphone_container:nth-child(2):before {
+		content: '';
+		width: 15.2rem;
+		height: 15.2rem;
+		border-radius: 50%;
+		background-color: var(--back-circle);
+		top: 130rem;
+		z-index: -1;
+	}
+	.smartphone_container:nth-child(3):before {
+		content: '';
+		width: 15.2rem;
+		height: 15.2rem;
+		border-radius: 50%;
+		background-color: var(--back-circle);
+		top: 165rem;
+		z-index: -1;
+	}
+	.smartphone_container:nth-child(6):before {
+		content: '';
+		width: 15.2rem;
+		height: 15.2rem;
+		border-radius: 50%;
+		background-color: var(--back-circle);
+		top: 200rem;
+		z-index: -1;
+	}
+	.smartphone_container:nth-child(2)::after {
+		content: '';
+		width: 20rem;
+		height: 20rem;
+		border-radius: 50%;
+		background-color: var(--front-circle);
+		top: 127.6rem;
+		z-index: -2;
+	}
+	.smartphone_container:nth-child(3)::after {
+		content: '';
+		width: 20rem;
+		height: 20rem;
+		border-radius: 50%;
+		background-color: var(--front-circle);
+		top: 162.6rem;
+		z-index: -2;
+	}
+	.smartphone_container:nth-child(6)::after {
+		content: '';
+		width: 20rem;
+		height: 20rem;
+		border-radius: 50%;
+		background-color: var(--front-circle);
+		top: 197.6rem;
+		z-index: -2;
+	}
+	.system_ai {
+		width: 77.091rem;
+	}
+	.system_text_container {
+		width: 76.8rem;
+		padding: 0 2.56rem;
+		height: 9.587rem;
+		gap: 1.207rem;
+	}
+	.system_text_zag {
+		font-size: 1.28rem;
+		line-height: 1.28rem;
+	}
+	.system_zag {
+		width: 71.68rem;
+		height: 7rem;
+		font-size: 2.88rem;
+		line-height: 3.456rem;
+	}
+	.card_container_flex {
+		max-width: inherit;
+		padding: 0 2.56rem;
+		gap: 3.84rem;
+	}
+	.card {
+		width: 21.333rem;
+		height: 38.999rem;
+		gap: 0.2rem;
+	}
+	.food_card {
+		width: 21.333rem;
+		height: 14.233rem;
+	}
+	.cadr_full_info_conteiner {
+		width: inherit;
+		padding: 1.92rem 2.56rem;
+	}
+	.card_mark_conteiner {
+		width: inherit;
+	}
+	.card_mark {
+		font-size: 0.96rem;
+		line-height: 0.96rem;
+		height: min-content;
+		padding: 0.32rem 0.64rem;
+	}
+	.green_big {
+		width: 10.38rem;
+	}
+	.lightgreen_medium,
+	.red_medium {
+		width: 7.08rem;
+	}
+	.yellow_small {
+		width: 4.68rem;
+	}
+	.card_zag {
+		width: 16.213rem;
+		height: 2rem;
+		font-size: 1.92rem;
+		line-height: 1.92rem;
+	}
+	.info_container {
+		width: 16.213rem;
+		height: 10.556rem;
+		padding-top: 1.599rem;
+		gap: 1.6rem;
+	}
+	.info_card_string {
+		gap: 1.279rem;
+	}
+	.img_card_icon {
+		width: 1.919rem;
+		height: 1.919rem;
+	}
+	.card_string_text {
+		height: 1.5rem;
+		font-size: 1.44rem;
+		line-height: 1.44rem;
+	}
+	.card_list {
+		width: 21.333rem;
+		height: 38.999rem;
+		gap: 2.559rem;
+	}
+	.list_zag {
+		width: inherit;
+		height: 4.6rem;
+		font-size: 1.92rem;
+		line-height: 2.3rem;
+	}
+	.card_ul {
+		width: inherit;
+		height: 31.84rem;
+		gap: 1.28rem;
+	}
+	.card_ul li {
+		height: 2.4rem;
+		gap: 1.28rem;
+	}
+	.list_style {
+		width: 2.4rem;
+		height: 2.4rem;
+	}
+	.a_conteiner {
+		width: inherit;
+	}
+	.text_under_case_block {
+		width: 19.194rem;
+		height: 1.741rem;
+		font-size: 1.44rem;
+		line-height: 1.44rem;
+	}
+
+	/*Галлерея*/
+
+	.presents_company {
+		height: 102rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+	.left_presents {
+		width: 70rem;
+		height: 74.781rem;
+		padding: 7.6rem 2.56rem;
+		gap: 1.21rem;
+	}
+	.presents_text_zag {
+		width: 70rem;
+		height: 1.38rem;
+		font-size: 1.28rem;
+		line-height: 1.28rem;
+	}
+	.presents_zag {
+		width: 70rem;
+		height: 7rem;
+		font-size: 2.88rem;
+		line-height: 3.456rem;
+	}
+	.reviews_grid_2row_2col {
+		width: 70rem;
+		height: 48.722rem;
+		justify-content: center;
+	}
+	.reviews_block {
+		width: 32.641rem;
+		gap: 1.1rem;
+	}
+	.avatar_reviews {
+		width: 5.119rem;
+		height: 5.119rem;
+	}
+
+	/*Текст блоков отзывов*/
+
+	.reviews_user {
+		font-size: 1.44rem;
+		line-height: 2.592rem;
+	}
+	.user_name {
+		height: 1.459rem;
+		font-size: 1.28rem;
+		line-height: 1.28rem;
+	}
+	.img_gallery {
+		width: 76.8rem;
+		grid-template-columns: repeat(6, 11.306rem);
+		grid-template-rows: repeat(2, 1fr);
+	}
+	.gallery_pice {
+		width: 11.306rem;
+		height: 11.306rem;
+	}
+	.cost {
+		height: 131.627rem;
+	}
+	.cost_zag_container {
+		width: 76.8rem;
+		height: 6.159rem;
+		padding: 0 2.56rem;
+		gap: 1.279rem;
+	}
+	.cost_text_zag {
+		width: 71.68rem;
+		height: 1.38rem;
+		font-size: 1.28rem;
+		line-height: 1.28rem;
+	}
+	.cost_zag {
+		width: 71.68rem;
+		height: 3.5rem;
+		font-size: 2.88rem;
+		line-height: 3.456rem;
+	}
+	.cost_card_container {
+		width: 76.8rem;
+		height: 54.032rem;
+		padding: 0 11.041rem;
+		gap: 3.839rem;
+	}
+	.cost_card {
+		width: 25.439rem;
+		height: 52rem;
+		padding: 3.68rem;
+		gap: 3.84rem;
+	}
+	.cost_card_pice_one {
+		width: 18rem;
+		height: 14.492rem;
+		gap: 1rem;
+	}
+	.text_zag_card {
+		height: 1.6rem;
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+	}
+	.cost_string {
+		height: 4.959rem;
+		gap: 0.3rem;
+	}
+	.symphol {
+		width: 1.7rem;
+		height: 4.6rem;
+		padding: 0.2rem 0;
+		font-size: 2.4rem;
+		line-height: 2.4rem;
+	}
+	.cost_zag_card {
+		height: 5rem;
+		font-size: 4.96rem;
+		line-height: 4.96rem;
+	}
+	.reviews_cost {
+		width: inherit;
+		height: 4.171rem;
+		font-size: 1.28rem;
+		line-height: 2.048rem;
+	}
+	.cost_info_list {
+		width: 18rem;
+	}
+	.cost_info_list ul {
+		gap: 1.28rem;
+	}
+	.cost_info_list li {
+		gap: 1rem;
+		font-size: 1.4rem;
+		line-height: 1.728rem;
+	}
+	.cost_card_button {
+		width: 18rem;
+		height: 7.36rem;
+		padding: 1.28rem 4.491rem;
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+	}
+	.two_card::after {
+		width: 19.625rem;
+		height: 2.397rem;
+		padding: 0.6rem 6.4rem;
+		top: -47.6rem;
+		right: -8.4rem;
+		font-size: 1.12rem;
+		line-height: 1.12rem;
+	}
+	.cost_info_under_card {
+		width: 71.681rem;
+		height: 4.171rem;
+	}
+	.cost_text_info {
+		width: 67.9rem;
+		height: inherit;
+		font-size: 1.28rem;
+		line-height: 2.048rem;
+	}
+	.mark_block_cost_container {
+		width: 76.8rem;
+		height: 33.064rem;
+		padding: 0 2.56rem;
+		gap: 3.84rem;
+	}
+	.mark_cost {
+		width: 15.264rem;
+		height: inherit;
+		gap: 1.5rem;
+	}
+	.mark_cost_img {
+		width: 5.119rem;
+		height: 5.119rem;
+	}
+	.mark_cost_zag {
+		width: inherit;
+		height: min-content;
+		font-size: 1.92rem;
+		line-height: 1.92rem;
+	}
+	.mark_cost_info {
+		width: inherit;
+		height: min-content;
+		font-size: 1.44rem;
+		line-height: 2.592rem;
+	}
+	.for_registr_form {
+		height: 79.67rem;
+	}
+	.registr_form_block {
+		width: 71.681rem;
+		height: 63.526rem;
+	}
+	.registr_left_text_block {
+		width: 43.008rem;
+		height: 63.526rem;
+		padding: 3.767rem 5.12rem 5.118rem 5.12rem;
+		gap: 2.49rem;
+	}
+	.registr_zag {
+		width: 32.768rem;
+		height: 7rem;
+		font-size: 2.88rem;
+		line-height: 3.456rem;
+	}
+	.registr_text {
+		width: 32.768rem;
+		height: 13rem;
+		font-size: 1.44rem;
+		line-height: 2.592rem;
+	}
+	.input_form_grid {
+		width: 32.768rem;
+		height: 29.661rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.82rem;
+		padding-top: 1.249rem;
+	}
+	.form_grid_pice {
+		width: inherit;
+		height: 5.958rem;
+		gap: 0.959rem;
+	}
+	.form_grid_zag {
+		width: inherit;
+		height: 1.38rem;
+		font-size: 1.28rem;
+		line-height: 1.28rem;
+	}
+	.registr_form_input {
+		width: inherit;
+		height: 3.619rem;
+	}
+	.registr_form_button {
+		width: inherit;
+		height: 3.82rem;
+		padding: 0.96rem 12.087rem;
+		font-size: 1.6rem;
+	}
+	.form_img,
+	.form_right_block {
+		width: 28.673rem;
+		height: 63.526rem;
+	}
+	.footer_conteiner {
+		width: inherit;
+		height: max-content;
+
+		padding: 0 1.3rem;
+		max-width: 76.8rem;
+		gap: 3rem;
+	}
+	.footer_column {
+		width: 14.3rem;
+		gap: 2rem;
+	}
+	.footer_small_column {
+		width: 10.2rem;
+	}
+	.footer_medium_column {
+		width: 12rem;
+	}
+	.footer_icons_img {
+		width: 2rem;
+		height: 2rem;
+	}
+	.footer_text {
+		font-size: 1.13rem;
+		line-height: 1.87rem;
+	}
+	.footer_column_zag {
+		font-size: 1.44rem;
+		line-height: 1.44rem;
+	}
+	.footer_adres,
+	.a_button {
+		font-size: 1.28rem;
+		line-height: 2.048rem;
+	}
+	.footer_text_16px {
+		width: inherit;
+		font-size: 1.28rem;
+		line-height: 1.28rem;
+		word-wrap: break-word;
+	}
+}
+/* Под разрешение 390px (iPhone 12/13/14 и другие современные смартфоны) */
+@media (max-width: 390px) {
+  header, main, footer {
+    max-width: 39rem;
+    width: 100%;
+  }
+
+  /* Хэдер */
+  header {
+    padding: 0 1.6rem;
+    height: 5.6rem;
+  }
+
+  .logo {
+    width: 12rem;
+    height: 1.6rem;
+  }
+
+  .header_right {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .header_right::after {
+    width: 3.2rem;
+    height: 3.2rem;
+    content: url(../img/icons/burger.svg);
+    transform: scale(0.8);
+  }
+
+  .header_right:hover aside {
+    width: 18rem;
+    right: -1.6rem;
+    top: 0.8rem;
+    padding: 4rem 1.6rem 1.6rem 1.6rem;
+    gap: 2rem;
+  }
+
+  .headname {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+  }
+
+  /* Секция 1 - Здоровая еда */
+  .healthy_food_dilevery {
+    height: auto;
+    padding: 2.4rem 1.6rem 4.8rem 1.6rem;
+  }
+
+  .container {
+    padding: 0;
+    gap: 3.2rem;
+    height: auto;
+  }
+
+  .grid_sec1 {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .left_sec1 {
+    width: 100%;
+    height: auto;
+  }
+
+  .deliver {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .info_delivery {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: center;
+    margin-top: 2.4rem;
+  }
+
+  .sec1_but_cont {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 3.2rem;
+    width: 100%;
+  }
+
+  .sec1_but {
+    width: 100% !important;
+    height: 4.8rem !important;
+    font-size: 1.6rem !important;
+    line-height: 1.6rem !important;
+    padding: 1.2rem !important;
+  }
+
+  .avatar_and_text {
+    width: 100%;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-top: 3.2rem;
+    padding-left: 0;
+    height: auto;
+  }
+
+  .img_av {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .avatar {
+    width: 4rem;
+    height: 4rem;
+    margin-left: -1.2rem;
+  }
+
+  .sec1_p {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    text-align: center;
+  }
+
+  .img_deliv_grid {
+    width: 100%;
+    height: auto;
+    max-width: 35rem;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .healthy_food_dilevery picture {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Секция 2 - Логотипы компаний */
+  .company {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .flex_col_sec2 {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    gap: 1.6rem;
+  }
+
+  .about {
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+
+  .company_container {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    height: auto;
+    padding: 0;
+  }
+
+  .logos_company {
+    height: 2.4rem;
+  }
+
+  /* Секция 3 - Как это работает */
+   /* Секция 3 - Как это работает */
+  .healthy_doz_info {
+    padding: 4.8rem 1.6rem;
+    gap: 4.8rem;
+  }
+
+  .healthy_doz_block1 {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    gap: 1.2rem;
+  }
+
+  .text_healthy_doz_block1 {
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+  }
+
+  .healthy_doz_zag {
+    width: 100%;
+    height: auto;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    text-align: center;
+  }
+
+  .healthy_doz_block2_grid_row3_col2 {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+    position: relative;
+  }
+
+  /* Чередование: текст -> телефон -> текст -> телефон -> текст -> телефон */
+  .healthy_doz_block2_grid_row3_col2 .one_case {
+    order: 1;
+  }
+
+  .healthy_doz_block2_grid_row3_col2 .smartphone_container:nth-of-type(1) {
+    order: 2;
+    margin-bottom: 2rem;
+  }
+
+  .healthy_doz_block2_grid_row3_col2 .two_case {
+    order: 3;
+  }
+
+  .healthy_doz_block2_grid_row3_col2 .smartphone_container:nth-of-type(2) {
+    order: 4;
+    margin-bottom: 2rem;
+  }
+
+  .healthy_doz_block2_grid_row3_col2 .three_case {
+    order: 5;
+  }
+
+  .healthy_doz_block2_grid_row3_col2 .smartphone_container:nth-of-type(3) {
+    order: 6;
+  }
+
+  .case_info {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    height: auto;
+  }
+
+  .number {
+    font-size: 5.6rem;
+    line-height: 5.6rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .case_zag {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .case_text {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    height: auto;
+    text-align: center;
+    padding-top: 0.8rem;
+  }
+
+  .smartphone_container {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .smartphone {
+    width: 16rem;
+    height: auto;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Восстанавливаем круги для телефонов */
+  .smartphone_container:nth-of-type(1)::before {
+    content: '';
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    background-color: var(--back-circle);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .smartphone_container:nth-of-type(1)::after {
+    content: '';
+    width: 28rem;
+    height: 28rem;
+    border-radius: 50%;
+    background-color: var(--front-circle);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+
+  .smartphone_container:nth-of-type(2)::before {
+    content: '';
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    background-color: var(--back-circle);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .smartphone_container:nth-of-type(2)::after {
+    content: '';
+    width: 28rem;
+    height: 28rem;
+    border-radius: 50%;
+    background-color: var(--front-circle);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+
+  .smartphone_container:nth-of-type(3)::before {
+    content: '';
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    background-color: var(--back-circle);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .smartphone_container:nth-of-type(3)::after {
+    content: '';
+    width: 28rem;
+    height: 28rem;
+    border-radius: 50%;
+    background-color: var(--front-circle);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+}
+  /* Секция 4 - Прием пищи */
+  .system_ai {
+    height: auto;
+    margin-top: 2.4rem;
+    gap: 4.8rem;
+    padding: 0 1.6rem;
+  }
+
+  .system_text_container {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    gap: 1.2rem;
+  }
+
+  .system_text_zag {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+
+  .system_zag {
+    width: 100%;
+    height: auto;
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+
+  .card_container_flex {
+    width: 100%;
+    padding: 0;
+    gap: 2.4rem;
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 32rem;
+    height: auto;
+  }
+
+  .food_card {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.5/1;
+  }
+
+  .cadr_full_info_conteiner {
+    padding: 2rem;
+    height: auto;
+  }
+
+  .card_mark_conteiner {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .card_mark {
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .card_zag {
+    font-size: 2rem;
+    line-height: 2rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .info_container {
+    width: 100%;
+    height: auto;
+    gap: 1.2rem;
+  }
+
+  .card_list {
+    width: 100%;
+    max-width: 32rem;
+    height: auto;
+    gap: 2rem;
+  }
+
+  .list_zag {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .card_ul {
+    height: auto;
+    gap: 1.2rem;
+  }
+
+  .card_ul li {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
+  .a_conteiner {
+    width: 100%;
+  }
+
+  .text_under_case_block {
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+  }
+
+  /* Секция 5 - Отзывы и галерея */
+  .presents_company {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 3.2rem 1.6rem;
+  }
+
+  .left_presents {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin-top: 0;
+    gap: 2.4rem;
+  }
+
+  .presents_reviews_conteiner {
+    width: 100%;
+  }
+
+  .presents_text_zag {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+  }
+
+  .presents_zag {
+    width: 100%;
+    height: auto;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    text-align: center;
+  }
+
+  .reviews_grid_2row_2col {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .reviews_block {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .avatar_reviews {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+
+  .reviews_user {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+
+  .user_name {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+
+  .img_gallery {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 3.2rem;
+  }
+
+  .gallery_pice {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  /* Секция 6 - Цены */
+  .cost {
+    height: auto;
+    gap: 3.2rem;
+    padding: 3.2rem 1.6rem;
+  }
+
+  .cost_zag_container {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding: 0;
+    gap: 1.2rem;
+  }
+
+  .cost_text_zag {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+  }
+
+  .cost_zag {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .cost_card_container {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .cost_card {
+    width: 100%;
+    max-width: 32rem;
+    height: auto;
+    margin: 0 auto;
+    padding: 3.2rem 2rem;
+    gap: 2.4rem;
+  }
+
+  .cost_card_pice_one {
+    width: 100%;
+    height: auto;
+  }
+
+  .text_zag_card {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+  }
+
+  .cost_string {
+    height: auto;
+  }
+
+  .symphol {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    height: auto;
+    padding: 0;
+  }
+
+  .cost_zag_card {
+    font-size: 4rem;
+    line-height: 4rem;
+    height: auto;
+  }
+
+  .reviews_cost {
+    width: 100%;
+    height: auto;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  .cost_info_list {
+    width: 100%;
+  }
+
+  .cost_info_list li {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    gap: 1.2rem;
+  }
+
+  .cost_card_button {
+    width: 100%;
+    height: 5.6rem;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    padding: 0;
+  }
+
+  .two_card::after {
+    display: none;
+  }
+
+  .cost_info_under_card {
+    width: 100%;
+    height: auto;
+  }
+
+  .cost_text_info {
+    width: 100%;
+    height: auto;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  .mark_block_cost_container {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    flex-direction: column;
+    gap: 2.4rem;
+    margin-top: 1.6rem;
+  }
+
+  .mark_cost {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .mark_cost_img {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+
+  .mark_cost_zag {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  .mark_cost_info {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    height: auto;
+  }
+
+  /* Секция 7 - Форма регистрации */
+  .for_registr_form {
+    height: auto;
+    padding: 3.2rem 1.6rem;
+  }
+
+  .registr_form_block {
+    width: 100%;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
+  .registr_left_text_block {
+    width: 100%;
+    height: auto;
+    padding: 2.4rem;
+    gap: 1.6rem;
+  }
+
+  .registr_zag {
+    width: 100%;
+    height: auto;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    text-align: center;
+  }
+
+  .registr_text {
+    width: 100%;
+    height: auto;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    text-align: center;
+  }
+
+  .input_form_grid {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .form_grid_pice {
+    width: 100%;
+    height: auto;
+    gap: 0.8rem;
+  }
+
+  .form_grid_zag {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    text-align: left;
+  }
+
+  .registr_form_input {
+    width: 100%;
+    height: 4.4rem;
+  }
+
+  .registr_form_button {
+    width: 100%;
+    height: 4.4rem;
+    font-size: 1.6rem;
+    padding: 0;
+  }
+
+  .form_right_block {
+    width: 100%;
+    height: 20rem;
+  }
+
+  .form_right_block::before {
+    width: 100%;
+    height: 20rem;
+  }
+
+  .form_img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+  }
+
+  /* Футер */
+  footer {
+    height: auto;
+    padding: 4rem 1.6rem;
+    margin-top: 0;
+  }
+
+  .footer_conteiner {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .footer_column {
+    width: 100%;
+    height: auto;
+    gap: 1.6rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer_small_column,
+  .footer_medium_column {
+    width: 100%;
+    gap: 1.2rem;
+  }
+
+  .footer_icons {
+    justify-content: center;
+  }
+
+  .footer_text {
+    width: 100%;
+    height: auto;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  .footer_column_zag {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+  }
+
+  .footer_adres,
+  .footer_contacts,
+  .footer_text_16px {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  .footer_contacts a {
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+}

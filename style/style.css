@@ -14,8 +14,10 @@ html {
 body {
 	line-height: 1;
 	color: #333;
-
 	font-family: 'Rubik';
+}
+main {
+	max-width: 1920px;
 }
 .a_button {
 	text-decoration: none;
@@ -26,29 +28,39 @@ body {
 	max-width: 130rem;
 	height: 57.4rem;
 	padding: 0rem 3.2rem 0rem 3.2rem;
-	margin: 0 auto;
 	gap: 9.6rem;
 	position: relative;
+}
+picture {
+	width: max-content;
+	height: max-content;
+}
+
+a,
+button:active {
+	-webkit-tap-highlight-color: transparent;
 }
 
 /*Хэдер*/
 
 header {
-	max-width: 192rem;
+	max-width: 1920px;
 	height: 8rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0rem 4.8rem 0rem 4.8rem;
-	box-shadow: 0rem 1.2rem 3.6rem var(--shadow-003);
+	padding: 0rem 4.8rem;
+	box-shadow: 0rem 1.2rem 3.6rem var(--shadow-0003);
+	background-color: var(--button-text-or-fon-color);
 	position: relative;
-	z-index: 100;
+	z-index: 200;
 }
 .logo {
 	width: 16.3rem;
 	height: 2.2rem;
 }
+aside,
 .header_right {
 	width: 71rem;
 	height: 4.2rem;
@@ -71,13 +83,21 @@ header {
 
 button {
 	cursor: pointer;
-	transition: 0.1s ease-in-out;
+	transition: 0.1s ease-out;
 }
 button:active {
 	transform: scale(90%);
 	box-shadow: inset 0 0 0.7rem var(--black-h);
-	transition: 0.2s ease-in-out;
+	transition: 0.1s ease-in;
 }
+.sec1_but_cont {
+	display: flex;
+	width: max-content;
+	flex-direction: row;
+	gap: 2rem;
+	margin-top: 5.9rem;
+}
+
 .orange_but {
 	width: 16.6rem;
 	height: 4.2rem;
@@ -97,7 +117,6 @@ button:active {
 	text-wrap: nowrap;
 	width: 34.6rem;
 	height: 5.2rem;
-	margin-top: 5.9rem;
 	vertical-align: middle;
 }
 .white_but {
@@ -106,7 +125,6 @@ button:active {
 	border: none;
 	width: 19.1rem;
 	height: 5.2rem;
-	margin-left: 1.6rem;
 }
 
 /*Секция №1*/
@@ -137,7 +155,9 @@ button:active {
 }
 
 .healthy_food_dilevery {
-	max-width: 192rem;
+	display: flex;
+	justify-content: center;
+	max-width: inherit;
 	height: 71.8rem;
 	padding: 4.8rem 31rem 9.6rem 31rem;
 	background-color: var(--sec1-fon);
@@ -183,6 +203,7 @@ button:active {
 	padding-left: 1.9rem;
 }
 .img_deliv_grid {
+	object-fit: cover;
 	width: 57rem;
 	height: 56.2rem;
 }
@@ -193,7 +214,7 @@ button:active {
 	display: flex;
 	justify-content: center;
 
-	max-width: 192rem;
+	max-width: inherit;
 }
 .company_container {
 	display: flex;
@@ -243,8 +264,7 @@ button:active {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-
-	max-width: 192rem;
+	max-width: inherit;
 	height: max-content;
 	padding: 8rem 36rem 4.8rem 36rem;
 	gap: 9.6rem;
@@ -286,7 +306,6 @@ button:active {
 .healthy_doz_block2_grid_row3_col2 {
 	display: grid;
 	grid-template-columns: 50% 50%;
-	grid-template-rows: 4.44rem/3;
 	gap: 2.4rem;
 }
 
@@ -363,7 +382,7 @@ button:active {
 	height: 37.941rem;
 	position: relative;
 	display: block;
-	overflow: visible;
+	overflow: hidden;
 }
 .smartphone_container::after,
 .smartphone_container::before {
@@ -431,8 +450,7 @@ button:active {
 
 .system_ai {
 	display: flex;
-
-	max-width: 192rem;
+	max-width: inherit;
 	height: 150rem;
 	margin-top: 10rem;
 	flex-direction: column;
@@ -492,6 +510,7 @@ button:active {
 	height: 50.616rem;
 	border: none;
 	border-radius: 1.1rem;
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	gap: 0.2rem;
@@ -499,16 +518,16 @@ button:active {
 	box-shadow: 0rem 2.4rem 4.8rem var(--card-shadow);
 	transition: 0.4s ease-in-out;
 	&:hover {
-		transform: scale(105%);
-		
+		transform: scale(108%);
+		box-shadow: 0rem 0rem 1rem var(--black-h);
 		transition: 0.4s ease-in-out;
 	}
 }
 
 .food_card {
-	width: inherit;
-	height: 22.416rem;
+	width: 35rem;
 	object-fit: cover;
+	height: 22.416rem;
 }
 .cadr_full_info_conteiner {
 	width: inherit;
@@ -516,7 +535,7 @@ button:active {
 	flex-direction: column;
 	height: 28rem;
 	padding: 3.2rem 4.8rem 4.8rem 4.8rem;
-	gap: 12px;
+	gap: 1.2rem;
 }
 .card_mark_conteiner {
 	width: 24rem;
@@ -685,7 +704,7 @@ button:active {
 /*Секция №5*/
 
 .presents_company {
-	max-width: 192rem;
+	max-width: inherit;
 	height: 114.669rem;
 	background-color: var(--section-five-color);
 	display: grid;
@@ -814,21 +833,12 @@ button:active {
 	transition: 0.2s;
 	position: relative;
 	z-index: 100;
-	&:hover {
-		transform: scale(150%);
-		transition: 0.5s ease-in-out;
-		box-shadow: 0 0 3rem black;
-		overflow: hidden;
-		border-radius: 50%;
-		opacity: 1;
-		filter: blur(0rem);
-		z-index: 200;
-	}
+
 }
 /*Секция №6*/
 
 .cost {
-	max-width: 192rem;
+	max-width: inherit;
 	height: 151.672rem;
 	display: flex;
 	flex-direction: column;
@@ -871,7 +881,7 @@ button:active {
 }
 .cost_card_container {
 	width: 120rem;
-	height: 62.638rem;
+	height: 64.638rem;
 	max-width: 120rem;
 	padding: 0 16.6rem;
 	display: flex;
@@ -884,7 +894,7 @@ button:active {
 
 .cost_card {
 	width: 40.2rem;
-	height: 62.638rem;
+	height: 64.638rem;
 	border: none;
 	border-radius: 1.1rem;
 	padding: 4.6rem;
@@ -1020,26 +1030,26 @@ button:active {
 .two_card {
 	background-color: var(--section-five-color);
 	overflow: hidden;
-}
-.two_card::after {
-	content: 'Best value';
-	position: relative;
-	top: -58rem;
-	right: -14.2rem;
-	font-weight: 700;
-	font-style: Bold;
-	font-size: 1.4rem;
-	line-height: 1.4rem;
-	letter-spacing: 0%;
-	vertical-align: middle;
-	text-transform: uppercase;
-	color: var(--black-h);
-	width: 24.5rem;
-	height: 3rem;
-	padding: 0.8rem 8rem;
-	background-color: var(--yellow-color-card-mark);
-	text-align: center;
-	rotate: 45deg;
+	&::after {
+		content: 'Best value';
+		position: relative;
+		top: -62.4rem;
+		right: -14.2rem;
+		font-weight: 700;
+		font-style: Bold;
+		font-size: 1.4rem;
+		line-height: 1.4rem;
+		letter-spacing: 0%;
+		vertical-align: middle;
+		text-transform: uppercase;
+		color: var(--black-h);
+		width: 24.5rem;
+		height: 3rem;
+		padding: 0.8rem 8rem;
+		background-color: var(--yellow-color-card-mark);
+		text-align: center;
+		rotate: 45deg;
+	}
 }
 
 /*Подпись после карточек*/
@@ -1115,7 +1125,7 @@ button:active {
 /*Секция №7*/
 
 .for_registr_form {
-	max-width: 192rem;
+	max-width: inherit;
 	height: 76rem;
 	display: flex;
 	justify-content: center;
@@ -1136,7 +1146,7 @@ button:active {
 		var(--lightorange-color),
 		var(--button-color)
 	);
-	box-shadow: 0 2.4rem 4.8rem var(--shadow-003);
+	box-shadow: 0 2.4rem 4.8rem var(--shadow-0015);
 }
 .registr_left_text_block {
 	width: 72rem;
@@ -1160,12 +1170,15 @@ button:active {
 	height: 58.48rem;
 	position: relative;
 }
+.form_img {
+	object-fit: cover;
+}
 .form_right_block::before {
 	content: '';
 	width: inherit;
 	height: inherit;
 	position: absolute;
-	z-index: 2000;
+	z-index: 190;
 	pointer-events: none;
 	top: 0rem;
 	left: 0rem;
@@ -1241,6 +1254,11 @@ button:active {
 .registr_form_button {
 	width: 29.922rem;
 	height: 4.8rem;
+	font-size: 2rem;
+	line-height: 100%;
+	font-weight: 600;
+	text-align: center;
+	vertical-align: middle;
 	border: none;
 	border-radius: 0.9rem;
 	padding: 1.2rem;
@@ -1254,7 +1272,7 @@ button:active {
 /*Футер*/
 
 footer {
-	max-width: 192rem;
+	max-width: 1920px;
 	height: 46.7rem;
 	margin-top: 5rem;
 	border-top: 1px solid var(--footer-border);
@@ -1379,4 +1397,71 @@ footer {
 	letter-spacing: 0%;
 	vertical-align: middle;
 	color: var(--footer-under-logo);
+}
+/* Стили для сетки карточек 2x2 со списком справа */
+.meals_grid_container {
+  display: grid;
+  grid-template-columns: 1fr 33.6rem;
+  gap: 6.4rem;
+  width: 120rem;
+  max-width: 120rem;
+  padding: 0 3.2rem;
+}
+
+.cards_grid_2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6.4rem;
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 1024px) {
+  .meals_grid_container {
+    width: 100rem;
+    gap: 3.3rem;
+    grid-template-columns: 1fr 29rem;
+  }
+  
+  .cards_grid_2x2 {
+    gap: 3.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .meals_grid_container {
+    width: 76.8rem;
+    grid-template-columns: 1fr;
+    gap: 3.84rem;
+  }
+  
+  .cards_grid_2x2 {
+    gap: 3.84rem;
+  }
+}
+
+/* Адаптация для мобильных 390px */
+@media (max-width: 390px) {
+  .meals_grid_container {
+    width: 100%;
+    padding: 0;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+  
+  .cards_grid_2x2 {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+  
+  .cards_grid_2x2 .card {
+    width: 100%;
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+  
+  .card_list {
+    width: 100%;
+    max-width: 32rem;
+    margin: 0 auto;
+  }
 }

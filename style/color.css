@@ -1,5 +1,7 @@
 :root {
 	--shadow-003: rgba(0, 0, 0, 0.3);
+	--shadow-0015: rgba(0, 0, 0, 0.15);
+	--shadow-0003: rgba(0, 0, 0, 0.03);
 	--button-color: #e67e22;
 	--button-text-or-fon-color: #ffffff;
 	--black-h: #333333;
