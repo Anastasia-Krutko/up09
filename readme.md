@@ -42,22 +42,61 @@ Omnifood - это веб-сайт для сервиса доставки здо�
         <tbody>
             <tr>
                 <td class="metric">Performance Score</td>
-                <td>96</td>
+                <td>95</td>
                 <td class="target">> 90</td>
             </tr>
             <tr>
                 <td class="metric">FCP</td>
-                <td>1.0</td>
+                <td>0.8</td>
                 <td class="target">< 1.8s</td>
             </tr>
             <tr>
                 <td class="metric">LCP</td>
-                <td>1.1</td>
+                <td>1.4</td>
                 <td class="target">< 2.5s</td>
             </tr>
             <tr>
                 <td class="metric">CLS</td>
                 <td>0.012</td>
+                <td class="target">< 0.1</td>
+            </tr>
+            <tr>
+                <td class="metric">TBT</td>
+                <td>0</td>
+                <td class="target">< 200ms</td>
+            </tr>
+        </tbody>
+    </table>
+    
+# После оптимизации
+
+<table>
+        <thead>
+            <tr>
+                <th>Метрика</th>
+                <th>После оптимизации</th>
+                <th>Цель</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="metric">Performance Score</td>
+                <td>99</td>
+                <td class="target">> 90</td>
+            </tr>
+            <tr>
+                <td class="metric">FCP</td>
+                <td>0.6</td>
+                <td class="target">< 1.8s</td>
+            </tr>
+            <tr>
+                <td class="metric">LCP</td>
+                <td>0.9</td>
+                <td class="target">< 2.5s</td>
+            </tr>
+            <tr>
+                <td class="metric">CLS</td>
+                <td>0.008</td>
                 <td class="target">< 0.1</td>
             </tr>
             <tr>
