@@ -35,14 +35,9 @@
             font-weight: bold;
             color: #4CAF50;
             margin: 25px 0;
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
+            }
 
-        .show {
-            opacity: 1;
-        }
-
+    
         button {
             background-color: #4CAF50;
             color: white;
@@ -81,22 +76,16 @@ async function getNumber()
     try
     {
         const response = await fetch('/api/random');
-
         const number = await response.text();
 
         const div = document.getElementById("number");
 
-        div.classList.remove("show");
-
-        setTimeout(() =>
-        {
-            div.innerHTML = number;
-            div.classList.add("show");
-        }, 100);
+        div.innerHTML = number;
+        div.style.opacity = "1";
     }
-    catch
+    catch(error)
     {
-        alert("Ошибка получения числа");
+        alert("Ошибка: " + error);
     }
 }
 
