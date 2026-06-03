@@ -1,18 +1,24 @@
-Вот самый простой вариант для ASP.NET Core Web API (.NET 9).
+Вот самый простой рабочий вариант для ASP.NET Core Web API (.NET 9).
 
 1. Создай проект
 
-Create a new project → ASP.NET Core Web API
+1. Create a new project
+2. Выбери ASP.NET Core Web API
+3. Название проекта:
 
-Название:
+GreetingApp
 
-StringLengthApp
+4. Framework:
+
+.NET 9.0
+
+5. Нажми Create
 
 ⸻
 
-2. Program.cs
+2. Настрой Program.cs
 
-Полностью замени содержимое на:
+Открой файл Program.cs и замени содержимое:
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
@@ -24,52 +30,25 @@ app.Run();
 
 ⸻
 
-3. Создай модель
-
-В проекте создай папку:
-
-Models
-
-В ней файл:
-
-TextRequest.cs
-
-Код:
-
-namespace StringLengthApp.Models
-{
-    public class TextRequest
-    {
-        public string Text { get; set; }
-    }
-}
-
-⸻
-
-4. Создай контроллер
+3. Создай контроллер
 
 В папке Controllers создай файл:
 
-StringLengthController.cs
+GreetController.cs
 
 Код:
 
 using Microsoft.AspNetCore.Mvc;
-using StringLengthApp.Models;
-namespace StringLengthApp.Controllers
+namespace GreetingApp.Controllers
 {
     [ApiController]
-    [Route("api/string-length")]
-    public class StringLengthController : ControllerBase
+    [Route("api/greet")]
+    public class GreetController : ControllerBase
     {
-        [HttpPost]
-        public IActionResult GetLength([FromBody] TextRequest request)
+        [HttpGet("{name}")]
+        public IActionResult GetGreeting(string name)
         {
-            int length = request.Text.Length;
-            return Ok(new
-            {
-                length = length
-            });
+            return Ok($"Hello, {name}!");
         }
     }
 }
@@ -78,29 +57,17 @@ namespace StringLengthApp.Controllers
 
 Как работает Backend
 
-Получает:
+Если открыть:
 
-{
-  "text": "hello"
-}
+/api/greet/Anastasia
 
-⸻
+сервер вернёт:
 
-Считает:
-
-hello = 5 символов
+Hello, Anastasia!
 
 ⸻
 
-Возвращает:
-
-{
-  "length": 5
-}
-
-⸻
-
-5. Создай папку wwwroot
+4. Создай папку wwwroot
 
 ПКМ по проекту →
 
@@ -112,11 +79,9 @@ wwwroot
 
 ⸻
 
-6. Создай страницу
+5. Создай страницу
 
-В папке wwwroot
-
-Создай файл:
+В папке wwwroot создай файл:
 
 index.html
 
@@ -126,10 +91,10 @@ index.html
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Калькулятор длины строки</title>
+    <title>Приветствие</title>
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             background: #f4f6f9;
             display: flex;
             justify-content: center;
@@ -138,20 +103,32 @@ index.html
         }
         .card {
             background: white;
-            padding: 30px;
             width: 400px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px gray;
+            padding: 30px;
             text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.15);
         }
         input {
             width: 90%;
             padding: 10px;
-            font-size: 18px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            transform: scale(1.05);
         }
         #result {
             margin-top: 20px;
-            font-size: 30px;
+            font-size: 24px;
             color: green;
             font-weight: bold;
         }
@@ -159,40 +136,33 @@ index.html
 </head>
 <body>
 <div class="card">
-    <h2>Калькулятор длины строки</h2>
+    <h2>Компонент "Приветствие"</h2>
     <input
         type="text"
-        id="textInput"
-        placeholder="Введите текст">
-    <div id="result">
-        0
-    </div>
+        id="nameInput"
+        placeholder="Введите имя">
+    <br>
+    <button onclick="getGreeting()">
+        Получить приветствие
+    </button>
+    <div id="result"></div>
 </div>
 <script>
-const input =
-    document.getElementById("textInput");
-input.addEventListener("input", getLength);
-async function getLength()
+async function getGreeting()
 {
-    const text = input.value;
+    const name =
+        document.getElementById("nameInput").value;
+    if(name === "")
+    {
+        alert("Введите имя");
+        return;
+    }
     const response =
-        await fetch("/api/string-length",
-        {
-            method: "POST",
-            headers:
-            {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(
-            {
-                text: text
-            })
-        });
-    const data =
-        await response.json();
-    document.getElementById("result")
-        .innerHTML =
-        data.length;
+        await fetch("/api/greet/" + name);
+    const text =
+        await response.text();
+    document.getElementById("result").innerHTML =
+        text;
 }
 </script>
 </body>
@@ -208,39 +178,63 @@ Ctrl + F5
 
 ⸻
 
-Вводишь:
+В поле введи:
 
-hello
+Anastasia
 
-Сайт автоматически отправляет:
+Нажми кнопку:
 
-{
-  "text": "hello"
-}
-
-⸻
-
-Сервер отвечает:
-
-{
-  "length": 5
-}
-
-⸻
+Получить приветствие
 
 На экране появится:
 
-5
+Hello, Anastasia!
 
 ⸻
 
-Если введёшь:
+Что происходит
 
-Привет
+Пользователь вводит имя
 
-то покажет:
+Например:
 
-6
+Ivan
+
+⸻
+
+JavaScript отправляет запрос
+
+fetch("/api/greet/" + name)
+
+Получается:
+
+/api/greet/Ivan
+
+⸻
+
+Контроллер получает имя
+
+public IActionResult GetGreeting(string name)
+
+Значение:
+
+Ivan
+
+⸻
+
+Сервер формирует ответ
+
+return Ok($"Hello, {name}!");
+
+Получается:
+
+Hello, Ivan!
+
+⸻
+
+Ответ отображается на странице
+
+document.getElementById("result").innerHTML = text;
 
 ⸻
 
@@ -248,13 +242,12 @@ hello
 
 Backend:
 
-* Создан API POST /api/string-length.
-* Текст принимается в формате JSON.
-* Сервер вычисляет количество символов и возвращает результат.
+* Реализован GET endpoint /api/greet/{name}.
+* Имя передаётся через URL.
+* Сервер возвращает строку приветствия в формате Hello, {name}!.
 
 Frontend:
 
-* Используется текстовое поле.
-* Событие input срабатывает при каждом вводе символа.
-* Через fetch отправляется POST-запрос на сервер.
-* Полученная длина строки автоматически отображается на странице без перезагрузки.
+* Есть поле ввода имени и кнопка.
+* При нажатии через fetch() отправляется GET-запрос.
+* Ответ от сервера отображается на странице без перезагрузки.
