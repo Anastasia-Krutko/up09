@@ -1,151 +1,274 @@
+Вот самый простой вариант для Visual Studio 2022 + ASP.NET Core Web API (.NET 9).
+
+1. Создай проект
+
+1. Create a new project
+2. Выбери ASP.NET Core Web API
+3. Название:
+
+RandomNumberApp
+
+4. Framework:
+
+.NET 9.0
+
+5. Нажми Create
+
+⸻
+
+2. Настрой Program.cs
+
+Открой Program.cs и вставь:
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllers();
+var app = builder.Build();
+app.UseDefaultFiles();
+app.UseStaticFiles();
+app.MapControllers();
+app.Run();
+
+⸻
+
+3. Создай контроллер
+
+В папке Controllers создай файл:
+
+RandomController.cs
+
+Код:
+
+using Microsoft.AspNetCore.Mvc;
+namespace RandomNumberApp.Controllers
+{
+    [ApiController]
+    [Route("api/random")]
+    public class RandomController : ControllerBase
+    {
+        [HttpGet]
+        public IActionResult GetNumber()
+        {
+            Random random = new Random();
+            int number = random.Next(1, 101);
+            return Ok(number);
+        }
+    }
+}
+
+⸻
+
+Объяснение
+
+Адрес API
+
+[Route("api/random")]
+
+Создает адрес:
+
+/api/random
+
+⸻
+
+GET-запрос
+
+[HttpGet]
+
+Разрешает получать данные через GET.
+
+⸻
+
+Генерация числа
+
+Random random = new Random();
+
+Создает генератор случайных чисел.
+
+⸻
+
+int number = random.Next(1, 101);
+
+Генерирует число:
+
+от 1 до 100
+
+⸻
+
+Ответ клиенту
+
+return Ok(number);
+
+Отправляет число на сайт.
+
+⸻
+
+4. Создай папку wwwroot
+
+ПКМ по проекту →
+
+Add → New Folder
+
+Название:
+
+wwwroot
+
+⸻
+
+5. Создай страницу
+
+В папке wwwroot
+
+Создай файл:
+
+index.html
+
+Вставь код:
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Загрузка изображения</title>
-
+    <title>Генератор чисел</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-        }
-
-        .container {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.15);
-            width: 400px;
+            font-family: Arial;
+            background: #f4f4f4;
             text-align: center;
+            margin-top: 100px;
         }
-
-        h2 {
-            color: #333;
-        }
-
-        #preview {
-            margin-top: 15px;
-            max-width: 100%;
-            max-height: 250px;
+        .box {
+            background: white;
+            width: 300px;
+            margin: auto;
+            padding: 30px;
             border-radius: 10px;
-            display: none;
-            border: 2px solid #ddd;
+            box-shadow: 0 0 10px gray;
         }
-
+        #number {
+            font-size: 60px;
+            margin: 20px;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .show {
+            opacity: 1;
+        }
         button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
             padding: 10px 20px;
-            border-radius: 6px;
+            font-size: 18px;
             cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        progress {
-            width: 100%;
-            height: 20px;
-            margin-top: 15px;
-        }
-
-        input[type="file"] {
-            margin-top: 10px;
-        }
-
-        #status {
-            margin-top: 10px;
-            color: green;
-            font-weight: bold;
         }
     </style>
 </head>
 <body>
-
-<div class="container">
-
-    <h2>Загрузка изображения</h2>
-
-    <input type="file"
-           id="fileInput"
-           accept=".jpg,.png,.jpeg">
-
-    <img id="preview">
-
-    <progress id="progressBar"
-              value="0"
-              max="100">
-    </progress>
-
-    <br><br>
-
-    <button onclick="uploadFile()">
-        Загрузить
+<div class="box">
+    <h2>Случайное число</h2>
+    <div id="number">0</div>
+    <button onclick="getNumber()">
+        Get Number
     </button>
-
-    <div id="status"></div>
-
 </div>
-
 <script>
-
-    const fileInput = document.getElementById("fileInput");
-    const preview = document.getElementById("preview");
-
-    fileInput.addEventListener("change", function () {
-
-        const file = this.files[0];
-
-        if (file) {
-            preview.src = URL.createObjectURL(file);
-            preview.style.display = "block";
-        }
-    });
-
-    function uploadFile() {
-
-        const file = fileInput.files[0];
-
-        if (!file) {
-            alert("Выберите файл!");
-            return;
-        }
-
-        const formData = new FormData();
-        formData.append("file", file);
-
-        const xhr = new XMLHttpRequest();
-
-        xhr.upload.addEventListener("progress", function (e) {
-
-            if (e.lengthComputable) {
-
-                let percent =
-                    (e.loaded / e.total) * 100;
-
-                document.getElementById("progressBar").value = percent;
-            }
-        });
-
-        xhr.onload = function () {
-
-            if (xhr.status == 200) {
-                document.getElementById("status").innerHTML =
-                    "✓ Файл успешно загружен";
-            }
-        };
-
-        xhr.open("POST", "/api/upload");
-        xhr.send(formData);
-    }
-
+async function getNumber()
+{
+    const response =
+        await fetch('/api/random');
+    const number =
+        await response.text();
+    const div =
+        document.getElementById("number");
+    div.classList.remove("show");
+    setTimeout(function ()
+    {
+        div.innerHTML = number;
+        div.classList.add("show");
+    }, 100);
+}
 </script>
-
 </body>
 </html>
+
+⸻
+
+6. Запуск
+
+Нажми:
+
+Ctrl + F5
+
+или
+
+▶ Start
+
+⸻
+
+Как работает сайт
+
+При открытии
+
+Показывается:
+
+0
+
+⸻
+
+При нажатии
+
+Get Number
+
+вызывается функция:
+
+getNumber()
+
+⸻
+
+Запрос на сервер
+
+fetch('/api/random')
+
+отправляет запрос:
+
+GET /api/random
+
+⸻
+
+Сервер
+
+генерирует число:
+
+1 - 100
+
+и отправляет его обратно.
+
+⸻
+
+Анимация
+
+Сначала число исчезает:
+
+div.classList.remove("show");
+
+Затем появляется новое:
+
+div.classList.add("show");
+
+За счёт CSS:
+
+transition: opacity 0.5s;
+
+получается плавное появление.
+
+⸻
+
+Что сказать преподавателю
+
+Backend:
+
+* Создан API-контроллер RandomController.
+* Метод GET /api/random генерирует случайное число от 1 до 100.
+* Результат возвращается клиенту через Ok().
+
+Frontend:
+
+* Кнопка Get Number отправляет GET-запрос через fetch.
+* Полученное число выводится на экран.
+* Для визуального эффекта используется CSS-анимация появления через изменение прозрачности (opacity).
