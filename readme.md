@@ -1,108 +1,114 @@
-# Omnifood - Здоровое питание
+using Microsoft.AspNetCore.Mvc;
 
-Omnifood - это веб-сайт для сервиса доставки здорового питания, который предлагает персонализированные планы питания с использованием ИИ. Проект представляет собой современный одностраничный сайт с адаптивным дизайном, ориентированный на привлечение клиентов и продвижение услуги доставки здоровой еды.
+namespace UploadProject.Controllers
+{
+    [Route("api/upload")]
+    [ApiController]
+    public class UploadController : ControllerBase
+    {
+        [HttpPost]
+        public async Task<IActionResult> Upload(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+                return BadRequest("Файл не выбран");
 
-## Основные особенности
+            string folder = Path.Combine(
+                Directory.GetCurrentDirectory(),
+                "Uploads");
 
-- **Персонализированное питание**: Использование ИИ для создания индивидуальных планов питания
-- **Широкий выбор блюд**: Более 5000 рецептов, подходящих для различных диет (вегетарианская, веганская, без глютена и др.)
-- **Удобная доставка**: Ежедневная доставка свежих блюд к двери клиента
-- **Гибкие тарифы**: Доступны различные подписки в зависимости от потребностей клиента
-- **Отзывы клиентов**: Реальные отзывы пользователей сервиса
+            if (!Directory.Exists(folder))
+                Directory.CreateDirectory(folder);
 
-## Структура сайта
+            string filePath = Path.Combine(folder, file.FileName);
 
-- Главная страница с описанием услуги
-- Раздел "Как это работает" с объяснением процесса
-- Каталог блюд с информацией о калориях и рейтингах
-- Отзывы клиентов
-- Тарифные планы и цены
-- Форма регистрации
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
 
-## Технологии
+            return Ok("Файл загружен");
+        }
+    }
+}
+INDEX 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Загрузка файла</title>
+</head>
+<body>
 
-- HTML5
-- CSS3 (с использованием Flexbox и Grid)
-- Адаптивный дизайн
+    <h2>Загрузка изображения</h2>
 
-## Целевая аудитория
+    <input type="file" id="fileInput" accept=".jpg,.png">
 
-Сайт ориентирован на людей, которые хотят питаться здоровой и полезной пищей, но не имеют времени на планирование рациона и приготовление еды.
+    <br><br>
 
-# До оптимизации
+    <img id="preview"
+         width="200"
+         style="display:none;">
 
-<table>
-        <thead>
-            <tr>
-                <th>Метрика</th>
-                <th>До оптимизации</th>
-                <th>Цель</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="metric">Performance Score</td>
-                <td>95</td>
-                <td class="target">> 90</td>
-            </tr>
-            <tr>
-                <td class="metric">FCP</td>
-                <td>0.8</td>
-                <td class="target">< 1.8s</td>
-            </tr>
-            <tr>
-                <td class="metric">LCP</td>
-                <td>1.4</td>
-                <td class="target">< 2.5s</td>
-            </tr>
-            <tr>
-                <td class="metric">CLS</td>
-                <td>0.012</td>
-                <td class="target">< 0.1</td>
-            </tr>
-            <tr>
-                <td class="metric">TBT</td>
-                <td>0</td>
-                <td class="target">< 200ms</td>
-            </tr>
-        </tbody>
-    </table>
-    
-# После оптимизации
+    <br><br>
 
-<table>
-        <thead>
-            <tr>
-                <th>Метрика</th>
-                <th>После оптимизации</th>
-                <th>Цель</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="metric">Performance Score</td>
-                <td>99</td>
-                <td class="target">> 90</td>
-            </tr>
-            <tr>
-                <td class="metric">FCP</td>
-                <td>0.6</td>
-                <td class="target">< 1.8s</td>
-            </tr>
-            <tr>
-                <td class="metric">LCP</td>
-                <td>0.9</td>
-                <td class="target">< 2.5s</td>
-            </tr>
-            <tr>
-                <td class="metric">CLS</td>
-                <td>0.008</td>
-                <td class="target">< 0.1</td>
-            </tr>
-            <tr>
-                <td class="metric">TBT</td>
-                <td>0</td>
-                <td class="target">< 200ms</td>
-            </tr>
-        </tbody>
-    </table>
+    <progress id="progressBar"
+              value="0"
+              max="100"
+              style="width:300px;">
+    </progress>
+
+    <br><br>
+
+    <button onclick="uploadFile()">
+        Загрузить
+    </button>
+
+    <script>
+
+        const fileInput = document.getElementById("fileInput");
+        const preview = document.getElementById("preview");
+
+        fileInput.addEventListener("change", function () {
+
+            const file = this.files[0];
+
+            if (file) {
+                preview.src = URL.createObjectURL(file);
+                preview.style.display = "block";
+            }
+        });
+
+        function uploadFile() {
+
+            const file = fileInput.files[0];
+
+            const formData = new FormData();
+            formData.append("file", file);
+
+            const xhr = new XMLHttpRequest();
+
+            xhr.upload.addEventListener("progress", function (e) {
+
+                if (e.lengthComputable) {
+
+                    let percent =
+                        (e.loaded / e.total) * 100;
+
+                    document.getElementById(
+                        "progressBar"
+                    ).value = percent;
+                }
+            });
+
+            xhr.open(
+                "POST",
+                "/api/upload"
+            );
+
+            xhr.send(formData);
+        }
+
+    </script>
+
+</body>
+</html>
